@@ -1,19 +1,19 @@
 import { useState } from "react";
 import Button from "@mui/material/Button";
 import logo from "./logo.svg";
-import "./App.css";
 import theme from "./theme";
 import { ThemeProvider } from "@mui/material";
 import CustomCheckbox from "./CustomCheckbox/CustomCheckbox";
+import {app, appHeader, appLogo, appLink} from './App.module.scss';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
+    <div className={app}>
       <ThemeProvider theme={theme}>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+        <header className={appHeader}>
+          <img src={logo} className={appLogo} alt="logo" />
           <p>Hello Vite + React!</p>
           <p>
             <Button
@@ -29,7 +29,7 @@ function App() {
           </p>
           <p>
             <a
-              className="App-link"
+              className={appLink}
               href="https://reactjs.org"
               target="_blank"
               rel="noopener noreferrer"
@@ -38,7 +38,7 @@ function App() {
             </a>
             {" | "}
             <a
-              className="App-link"
+              className={appLink}
               href="https://vitejs.dev/guide/features.html"
               target="_blank"
               rel="noopener noreferrer"
